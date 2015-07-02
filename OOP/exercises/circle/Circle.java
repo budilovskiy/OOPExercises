@@ -1,4 +1,5 @@
 /**
+ * Exercise: The Circle Class
  * A class called circle is designed as shown in the following class diagram. It contains:
 Two private instance variables: radius (of type double) and color (of type String), with default value of 1.0 and "red",
 respectively.
