@@ -5,8 +5,7 @@ public class MyPoint {
 	private int x, y;
 
 	/**
-	 * A "no-argument" (or "no-arg") constructor that construct a point at (0,
-	 * 0).
+	 * A "no-argument" (or "no-arg") constructor that construct a point at (0, 0).
 	 */
 	public MyPoint() {
 		this.x = 0;
