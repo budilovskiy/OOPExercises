@@ -1,4 +1,4 @@
-package oop.excercises.themcomplexclass;
+package oop.excercises.themycomplexclass;
 
 import java.util.Scanner;
 
