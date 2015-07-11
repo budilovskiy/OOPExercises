@@ -124,7 +124,8 @@ public class MyComplex {
 
 	@Override
 	public String toString() {
-		return "(" + real + (imag < 0 ? (" - ") + Math.abs(imag) : " + " + imag) + "i)";
+		return "(" + real
+				+ (imag < 0 ? (" - ") + Math.abs(imag) : " + " + imag) + "i)";
 	}
 
 	/**
@@ -244,7 +245,7 @@ public class MyComplex {
 	 * @return the argument of this complex number in radians (in double)
 	 */
 	public double argumentInRadians() {
-		return Math.atan2(real, imag);
+		return Math.atan2(imag, real);
 	}
 
 	/**
@@ -310,8 +311,12 @@ public class MyComplex {
 	 * @return this instance multiplied with another
 	 */
 	public MyComplex multiplyWith(MyComplex another) {
-		real = real * another.real - imag * another.imag;
-		imag = real * another.imag + imag * another.real;
+		double a = real;
+		double b = imag;
+		double c = another.real;
+		double d = another.imag;
+		real = a * c - b * d;
+		imag = a * d + b * c;
 		return this;
 	}
 
@@ -329,10 +334,12 @@ public class MyComplex {
 	 * @return this instance divided by another
 	 */
 	public MyComplex divideBy(MyComplex another) {
-		double divisor = another.real * another.real + another.imag
-				* another.imag;
-		real = this.multiplyWith(another.conjugate()).real / divisor;
-		imag = this.multiplyWith(another.conjugate()).imag / divisor;
+		double a = real;
+		double b = imag;
+		double c = another.real;
+		double d = another.imag;
+		real = (a * c - b * (-d)) / (c * c + d * d);
+		imag = (a * (-d) + b * c) / (c * c + d * d);
 		return this;
 	}
 }
