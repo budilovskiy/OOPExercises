@@ -71,7 +71,7 @@ design (introduced for teaching purpose).
 - Unusual to have both argumentInRadians() and argumentInDegrees().
  */
 
-package oop.excercises.themcomplexclass;
+package oop.excercises.themycomplexclass;
 
 public class MyComplex {
 
