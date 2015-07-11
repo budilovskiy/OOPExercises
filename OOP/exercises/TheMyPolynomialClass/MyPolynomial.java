@@ -158,7 +158,7 @@ public class MyPolynomial {
 	public MyPolynomial add(MyPolynomial another) {
 		double[] newCoeffs = coeffs;
 		for (int i = 0; i < another.coeffs.length; i++) {
-			newCoeffs[i] = coeffs[i] + another.coeffs[i];
+			newCoeffs[i] += another.coeffs[i];
 		}
 		return new MyPolynomial(newCoeffs);
 	}
