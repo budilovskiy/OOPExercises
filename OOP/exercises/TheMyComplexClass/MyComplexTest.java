@@ -1,4 +1,4 @@
-package oop.excercises.themcomplexclass;
+package oop.excercises.themycomplexclass;
 
 public class MyComplexTest {
 	MyComplex c1 = new MyComplex(1, 3);
