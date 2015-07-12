@@ -1,3 +1,5 @@
+package oop.excercises.themydateclass;
+
 /**
  * A class called MyDate, which models a date instance, is defined as shown in
  * the class diagram. 
