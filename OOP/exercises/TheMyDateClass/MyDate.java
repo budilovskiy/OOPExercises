@@ -225,7 +225,7 @@ public class MyDate {
 	 * 
 	 * @param year
 	 */
-	public void setYear(int year) {
+	public void setYear(int year)  throws IllegalStateException {
 		if (year >= MIN_YEAR && year <= MAX_YEAR) {
 			this.year = year;
 		} else {
@@ -240,7 +240,7 @@ public class MyDate {
 	 * 
 	 * @param month
 	 */
-	public void setMonth(int month) {
+	public void setMonth(int month) throws IllegalStateException {
 		if (month >= 1 && month <= 12) {
 			this.month = month;
 		} else {
@@ -256,7 +256,7 @@ public class MyDate {
 	 * 
 	 * @param day
 	 */
-	public void setDay(int day) {
+	public void setDay(int day) throws IllegalStateException {
 		if ((day >= 1 && day <= daysInMonths[month - 1])
 				|| (isLeapYear(year) && month == 2 && day >= 1 && day <= 29)) {
 			this.day = day;
