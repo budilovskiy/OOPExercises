@@ -214,7 +214,7 @@ public class MyDate {
 			this.month = month;
 			this.day = day;
 		} else {
-			throw new IllegalArgumentException("Invalid year, month, or day!");
+			throw new IllegalArgumentException("Invalid year[1-9999], month[1-12], or day[1-28|29|30|31]!");
 		}
 	}
 
@@ -225,11 +225,11 @@ public class MyDate {
 	 * 
 	 * @param year
 	 */
-	public void setYear(int year)  throws IllegalStateException {
+	public void setYear(int year)  throws IllegalArgumentException {
 		if (year >= MIN_YEAR && year <= MAX_YEAR) {
 			this.year = year;
 		} else {
-			throw new IllegalArgumentException("Invalid year!");
+			throw new IllegalArgumentException("Invalid year![1-9999]");
 		}
 	}
 
@@ -240,11 +240,11 @@ public class MyDate {
 	 * 
 	 * @param month
 	 */
-	public void setMonth(int month) throws IllegalStateException {
+	public void setMonth(int month) throws IllegalArgumentException {
 		if (month >= 1 && month <= 12) {
 			this.month = month;
 		} else {
-			throw new IllegalArgumentException("Invalid month!");
+			throw new IllegalArgumentException("Invalid month![1-12]");
 		}
 	}
 
@@ -256,12 +256,12 @@ public class MyDate {
 	 * 
 	 * @param day
 	 */
-	public void setDay(int day) throws IllegalStateException {
+	public void setDay(int day) throws IllegalArgumentException {
 		if ((day >= 1 && day <= daysInMonths[month - 1])
 				|| (isLeapYear(year) && month == 2 && day >= 1 && day <= 29)) {
 			this.day = day;
 		} else {
-			throw new IllegalArgumentException("Invalid day!");
+			throw new IllegalArgumentException("Invalid day![1-28|29|30|31]");
 		}
 	}
 
@@ -299,7 +299,7 @@ public class MyDate {
 	 * 
 	 * @return this instance with increased day
 	 */
-	public MyDate nextDay() throws IllegalStateException {
+	public MyDate nextDay() throws IllegalArgumentException {
 		day++;
 		int maxDays = daysInMonths[month - 1]
 				+ ((isLeapYear(year) && month == 2) ? 1 : 0);
@@ -312,7 +312,7 @@ public class MyDate {
 			year++;
 		}
 		if (year > MAX_YEAR) {
-			throw new IllegalStateException("Year out of range!");
+			throw new IllegalArgumentException("Year out of range![1-9999]");
 		}
 		return this;
 	}
@@ -324,14 +324,14 @@ public class MyDate {
 	 * 
 	 * @return this instance with increased month
 	 */
-	public MyDate nextMonth() throws IllegalStateException {
+	public MyDate nextMonth() throws IllegalArgumentException {
 		month++;
 		if (month > 12) {
 			month = 1;
 			year++;
 		}
 		if (year > MAX_YEAR) {
-			throw new IllegalStateException("Year out of range!");
+			throw new IllegalArgumentException("Year out of range![1-9999]");
 		}
 		int maxDays = daysInMonths[month - 1]
 				+ ((isLeapYear(year) && month == 2) ? 1 : 0);
@@ -349,10 +349,10 @@ public class MyDate {
 	 * 
 	 * @return this instance with increased year
 	 */
-	public MyDate nextYear() throws IllegalStateException {
+	public MyDate nextYear() throws IllegalArgumentException {
 		year++;
 		if (year > MAX_YEAR) {
-			throw new IllegalStateException("Year out of range!");
+			throw new IllegalArgumentException("Year out of range![1-9999]");
 		}
 		int maxDays = daysInMonths[month - 1]
 				+ ((isLeapYear(year) && month == 2) ? 1 : 0);
@@ -368,7 +368,7 @@ public class MyDate {
 	 * 
 	 * @return this instance with decreased day
 	 */
-	public MyDate previousDay() throws IllegalStateException {
+	public MyDate previousDay() throws IllegalArgumentException {
 		day--;
 		if (day < 1) {
 			day = 31;
@@ -379,7 +379,7 @@ public class MyDate {
 			year--;
 		}
 		if (year < MIN_YEAR) {
-			throw new IllegalStateException("Year out of range!");
+			throw new IllegalArgumentException("Year out of range![1-9999]");
 		}
 		int maxDays = daysInMonths[month - 1]
 				+ ((isLeapYear(year) && month == 2) ? 1 : 0);
@@ -395,14 +395,14 @@ public class MyDate {
 	 * 
 	 * @return this instance with decreased month
 	 */
-	public MyDate previousMonth() throws IllegalStateException {
+	public MyDate previousMonth() throws IllegalArgumentException {
 		month--;
 		if (month < 1) {
 			month = 12;
 			year--;
 		}
 		if (year < MIN_YEAR) {
-			throw new IllegalStateException("Year out of range!");
+			throw new IllegalArgumentException("Year out of range![1-9999]");
 		}
 		int maxDays = daysInMonths[month - 1]
 				+ ((isLeapYear(year) && month == 2) ? 1 : 0);
@@ -418,10 +418,10 @@ public class MyDate {
 	 * 
 	 * @return this instance with decreased year
 	 */
-	public MyDate previousYear() throws IllegalStateException {
+	public MyDate previousYear() throws IllegalArgumentException {
 		year--;
 		if (year < MIN_YEAR) {
-			throw new IllegalStateException("Year out of range!");
+			throw new IllegalArgumentException("Year out of range![1-9999]");
 		}
 		int maxDays = daysInMonths[month - 1]
 				+ ((isLeapYear(year) && month == 2) ? 1 : 0);
