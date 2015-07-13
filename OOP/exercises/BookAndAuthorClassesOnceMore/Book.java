@@ -207,11 +207,11 @@ public class Book {
 	 * @param author
 	 */
 	public void addAuthor(Author author) {
-		if (numAuthors < authors.length) {
+		if (numAuthors < MAX_AUTHORS) {
 			authors[numAuthors] = author;
 			++numAuthors;
 		} else {
-			System.out.println("Number of authors can not be more than " + authors.length);
+			System.out.println("Number of authors can not be more than " + MAX_AUTHORS);
 		}
 	}
 	
