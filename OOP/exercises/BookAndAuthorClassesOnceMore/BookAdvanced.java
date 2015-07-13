@@ -1,4 +1,4 @@
-package oop.excercises.bookbndbuthorclassesoncemore;
+package oop.excercises.bookandauthorclassesoncemore;
 
 import java.util.ArrayList;
 import java.util.List;
