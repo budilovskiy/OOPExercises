@@ -1,4 +1,4 @@
-package oop.excercises.bookbndbuthorclassesoncemore;
+package oop.excercises.bookandauthorclassesoncemore;
 
 public class TestBook {
 
