@@ -1,4 +1,4 @@
-package oop.excercises.bookbandbuthorclassesoncemore;
+package oop.excercises.bookandauthorclassesoncemore;
 
 /** 
 * A class called Book is designed as shown in the class diagram. It contains:
