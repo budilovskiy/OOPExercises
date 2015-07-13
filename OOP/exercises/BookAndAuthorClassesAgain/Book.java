@@ -111,7 +111,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "name " + " by " + authors.length + " authors";
+		return "name " + "by " + authors.length + " authors";
 	}
 
 	// Introduce new methods called getAuthorName(), getAuthorEmail(),
