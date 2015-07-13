@@ -1,4 +1,4 @@
-package oop.excercises.bookbadbuthorclassesoncemore;
+package oop.excercises.bookandauthorclassesoncemore;
 
 /**
  * A class called Author is designed as shown in the class diagram. It contains:
