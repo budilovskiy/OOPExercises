@@ -108,8 +108,8 @@ public class Book {
 
 	private String name;
 	// Instead of using a fixed-length array in this case, it is better to 
-  // be a dynamically allocated array (e.g., ArrayList), which does not have a fixed 
-  // length.
+	// be a dynamically allocated array (e.g., ArrayList), which does not have a fixed 
+	// length.
 	private List<Author> authors = new ArrayList<>();
 	private int numAuthors = 0;
 	private double price;
