@@ -89,7 +89,7 @@ public class Book {
 		return name;
 	}
 
-	public Author getAuthors() {
+	public Author[] getAuthors() {
 		return authors;
 	}
 
@@ -111,7 +111,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "name " + "by " + authors.length + " authors";
+		return name + " by " + authors.length + " authors";
 	}
 
 	// Introduce new methods called getAuthorName(), getAuthorEmail(),
@@ -119,22 +119,22 @@ public class Book {
 	// of the author of the book. For example,
 	// public String getAuthorName() { ...... }
 	
-	public String getAuthorName() {
+	public String getAuthorName(Author author) {
 		return author.getName();
 	}
 	
-	public String getAuthorEmail() {
+	public String getAuthorEmail(Author author) {
 		return author.getEmail();
 	}
 	
-	public char getAuthorGender() {
+	public char getAuthorGender(Author author) {
 		return author.getGender();
 	}
 	
 	/**
 	 * A new method printAuthors() to print the names of all the authors.
 	 */
-	public void ptintAuthors() {
+	public void printAuthors() {
 		for (int i = 0; i < authors.length; i++) {
 			System.out.print(authors[i]);
 			if (i != authors.length - 1)
