@@ -1,3 +1,5 @@
+package oop.excercises.theauthorandbookclasses;
+
 /**
  * A class called Author is designed as shown in the class diagram. It contains:
  - Three private instance variables: name (String), email (String), and gender (char of either 'm' or 'f');
@@ -29,8 +31,6 @@ TRY:
 	to return the name, email and gender of the author of the book. For example,
 	public String getAuthorName() { ...... }
  */
-
-package oop.excercises.theauthorandbookclasses;
 
 public class Author {
 
