@@ -3,28 +3,17 @@ package oop.excercises.authorandbookclassesagain;
 public class TestBook {
 
 	public static void main(String[] args) {
-		Author johnatan = new Author("Johnatan S. Foer", "foer@nowhere.com",
-				'm');
-		System.out.println(johnatan);
-		johnatan.setEmail("s_foer@nowhere.com");
-		System.out.println(johnatan);
-		System.out.println("\nBooks:");
-
-		Book illuminated = new Book("Everything is Illuminated", johnatan,
-				9.99, 58);
-
-		// Use an anonymous instance of Author
-		Book slaughterhouse = new Book("Slaughterhouse-Five", new Author(
-				"Kurt Vonnegut", "vonnegut@nowhere.com", 'm'), 10.99);
-
-		System.out.println(illuminated);
-		System.out.println(slaughterhouse);
-
-		// Printing the name and email of the author from a Book instance.
-		// (Hint: aBook.getAuthor().getName(), aBook.getAuthor().getEmail()).
-		System.out.println(slaughterhouse.getName() + " by "
-				+ slaughterhouse.getAuthor().getName() + " at "
-				+ slaughterhouse.getAuthor().getEmail());
+			 
+		// Declare and allocate an array of Authors
+		Author[] authors = new Author[2];
+		authors[0] = new Author("Tan Ah Teck", "AhTeck@somewhere.com", 'm');
+		authors[1] = new Author("Paul Tan", "Paul@nowhere.com", 'm');
+		 
+		// Declare and allocate a Book instance
+		Book javaDummy = new Book("Java for Dummy", authors, 19.99, 99);
+		System.out.println(javaDummy);  // toString()
+		System.out.print("The authors are: ");
+		javaDummy.printAuthors();
 
 	}
 }
