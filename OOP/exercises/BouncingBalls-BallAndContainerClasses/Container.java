@@ -44,23 +44,23 @@ public class Container {
 	public boolean collidesWith(Ball ball) {
 		boolean ret = false;
 		if (ball.getX() <= x1) {
+			ball.setY(x1 + ball.getxDelta());
 			ball.reflectHorizontal();
-			ball.setY(x1 + ball.getyDelta());
 			ret = true;
 		}
 		if (ball.getX() >= x2) {
+			ball.setY(x2 - ball.getxDelta());
 			ball.reflectHorizontal();
-			ball.setY(x2 - ball.getyDelta());
 			ret = true;
 		}
 		if (ball.getY() <= y1) {
-			ball.reflectVertical();
 			ball.setY(y1 + ball.getyDelta());
+			ball.reflectVertical();
 			ret = true;
 		}
 		if (ball.getY() >= y2) {
-			ball.reflectVertical();
 			ball.setY(y2 - ball.getyDelta());
+			ball.reflectVertical();
 			ret = true;
 		}
 		return ret;
