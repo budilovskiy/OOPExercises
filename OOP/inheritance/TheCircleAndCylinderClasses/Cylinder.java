@@ -83,20 +83,41 @@ public class Cylinder extends Circle {
 	/**
 	 * Getter for height
 	 * 
-	 * @return
+	 * @return height of cylinder
 	 */
 	public double getHeight() {
 		return height;
 	}
 
 	/**
-	 * A public method for computing the volume of cylinder use superclass method
-	 * getArea() to get the base area
+	 * A public method for computing the volume of cylinder use superclass
+	 * method getArea() to get the base area
 	 * 
-	 * @return
+	 * @return volume of cylinder
 	 */
 	public double getVolume() {
-		return getArea() * height;
+		return super.getArea() * height;
 	}
-
+	
+	/**
+	 * Compute the surface area (=2π×radius×height + 2×base-area) of the 
+	 * cylinder instead of base area
+	 * 
+	 * @return surface area of cylinder
+	 */
+	@Override
+	public double getArea() {
+		return 2*Math.PI*getRadius()*height + 2*super.getArea();
+	}
+	
+	/**
+	 * Overrides the toString() inherited from the superclass Circle, e.g.,
+	 * 
+	 * @return string representation of cylinder
+	 */
+	@Override
+	public String toString() {
+		return "Cylinder: subclass of " + super.toString() + // use Circle's toString()
+				" height= " + height;
+	}
 }
