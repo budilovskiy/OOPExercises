@@ -33,7 +33,7 @@ public class TestCylinder {
 
 		Cylinder c4 = new Cylinder(1.0, 10);
 		System.out.println(c4); // Cylinder: subclass of Circle [radius=1.0, color=red, area=69.11503837897544] height= 10.0
-								// The area of a circle is not computed properly
-								// because it has been overwritten in Cylinder class
+					// The area of a circle is not computed properly
+					// because it has been overwritten in Cylinder class
 	}
 }
