@@ -1,5 +1,19 @@
 package oop.excersizes.superclassshapeanditssubclassescirclerectangleandsquare
 
+/**
+ * Write a superclass called Shape (as shown in the class diagram), which contains:
+ * Two instance variables color (String) and filled (boolean).
+ * Two constructors: a no-arg (no-argument) constructor that initializes the color 
+ * to "green" and filled to true, and a constructor that initializes the color and 
+ * filled to the given values.
+ * Getter and setter for all the instance variables. By convention, the getter for 
+ * a boolean variable xxx is called isXXX() (instead of getXxx() for all the other 
+ * types).
+ * A toString() method that returns "A Shape with color of xxx and filled/Not filled".
+ * Write a test program to test all the methods defined in Shape. 
+ * 
+ */
+
 public class Shape {
   
   private String color;
