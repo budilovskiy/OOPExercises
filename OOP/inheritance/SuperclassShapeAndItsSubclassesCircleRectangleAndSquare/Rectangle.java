@@ -59,21 +59,21 @@ public class Rectangle extends Shape {
 	}
 	
 	/**
-	 * Getter for height
+	 * Getter for length
 	 * 
-	 * @return height
+	 * @return length
 	 */
-	public double getHeight() {
-		return height;
+	public double getLength() {
+		return length;
 	}
 	
 	/**
-	 * Setter for height 
+	 * Setter for length 
 	 * 
-	 * @param height
+	 * @param length
 	 */
-	public void setHeight(double height) {
-		this.height = height;
+	public void setLength(double length) {
+		this.length = length;
 	}
 	
 	/**
@@ -82,7 +82,7 @@ public class Rectangle extends Shape {
 	 * @return area
 	 */
 	public double getArea() {
-		return width * height;
+		return width * length;
 	}
 	
 	/**
@@ -91,7 +91,7 @@ public class Rectangle extends Shape {
 	 * @return perimeter
 	 */
 	public double getPerimeter() {
-		return 2 * (width + height);
+		return 2 * (width + length);
 	}
 	
 	/*
