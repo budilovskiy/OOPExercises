@@ -1,4 +1,4 @@
-package oop.excersizes.superclassshapeanditssubclassescirclerectangleandsquare
+package oop.exersizes.superclassshapeanditssubclassescirclerectangleandsquare
 
 public class TestShape {
 
