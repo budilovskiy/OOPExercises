@@ -1,7 +1,108 @@
 package oop.excersizes.superclassshapeanditssubclassescirclerectangleandsquare
 
-public class Rectangle {
+public class Rectangle extends Shape {
 
+	private double width;
+	private double length;
 	
+	/**
+	 * The no-arg constructor initializes the width and length to 1.0.
+	 */
+	public Rectangle() {
+		super();
+		width = 1.0;
+		length = 1.0;
+	}
+	
+	/**
+	 * A constructor that initializes the width and length to the given values.
+	 * 
+	 * @param width
+	 * @param height
+	 */
+	public Rectangle(double width, double length) {
+		super();
+		this.width = width;
+		this.length = length;
+	}
+	
+	/**
+	 * A constructor that initializes the width, length color and filled to the given values.
+	 * 
+	 * @param width
+	 * @param height
+	 * @param color
+	 * @param filled
+	 */
+	public Rectangle(double width, double length, String color, boolean filled) {
+		super(color, filled);
+		this.width = width;
+		this.length = length;
+	}
+	
+	/**
+	 * Getter for width
+	 * 
+	 * @return width
+	 */
+	public double getWidth() {
+		return width;
+	}
+	
+	/**
+	 * Setter for width 
+	 * 
+	 * @param width
+	 */
+	public void setWidth(double width) {
+		this.width = width;
+	}
+	
+	/**
+	 * Getter for height
+	 * 
+	 * @return height
+	 */
+	public double getHeight() {
+		return height;
+	}
+	
+	/**
+	 * Setter for height 
+	 * 
+	 * @param height
+	 */
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	
+	/**
+	 * Calculate area of the rectangle
+	 * 
+	 * @return area
+	 */
+	public double getArea() {
+		return width * height;
+	}
+	
+	/**
+	 * Calculate perimeter of the rectangle
+	 * 
+	 * @return perimeter
+	 */
+	public double getPerimeter() {
+		return 2 * (width + height);
+	}
+	
+	/*
+	 * @return "A Rectangle with width=xxx and length=zzz, which is a subclass of yyy", 
+	 * where yyy is the output of the toString() method from the superclass.
+	 */
+	@Override
+	public String toString() {
+		return "A Rectangle with width=" + width 
+			+ " and length=" + length 
+			+ ", which is a subclass of " + super.toString();
+	}
 
 }
