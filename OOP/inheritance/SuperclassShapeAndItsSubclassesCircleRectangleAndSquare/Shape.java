@@ -21,8 +21,8 @@ package oop.excersizes.superclassshapeanditssubclassescirclerectangleandsquare
  * - Getter and setter for the instance variable radius.
  * - Methods getArea() and getPerimeter().
  * - Override the toString() method inherited, to return "A Circle with radius=xxx, 
- *      which is a subclass of yyy", where yyy is the output of the toString() method 
- *      from the superclass.
+ *			which is a subclass of yyy", where yyy is the output of the toString() method 
+ *			from the superclass.
  * 
  * The Rectangle class contains:
  * - Two instance variables width (double) and length (double).
