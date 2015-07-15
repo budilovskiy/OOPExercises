@@ -1,4 +1,4 @@
-package oop.excersizes.superclassshapeanditssubclassescirclerectangleandsquare
+package oop.exersizes.superclassshapeanditssubclassescirclerectangleandsquare
 
 /**
  * Write a superclass called Shape (as shown in the class diagram), which contains:
