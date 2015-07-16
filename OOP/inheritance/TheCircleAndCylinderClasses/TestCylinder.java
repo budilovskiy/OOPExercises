@@ -1,4 +1,4 @@
-package thecircleandcylinderclasses;
+package oop.excercises.thecircleandcylinderclasses;
 
 public class TestCylinder {
 
