@@ -1,4 +1,4 @@
-package oop.exersizes.superclassshapeanditssubclassescirclerectangleandsquare
+package oop.exersizes.superclassshapeanditssubclassescirclerectangleandsquare;
 
 public class Square extends Rectangle {
 
@@ -38,7 +38,7 @@ public class Square extends Rectangle {
 	 */
 	@Override
 	public String toString() {
-		return "A Square with side=" + super.gerWidth() 
+		return "A Square with side=" + super.getWidth() 
 			+ " , which is a subclass of " + super.toString();
 	}
 	
