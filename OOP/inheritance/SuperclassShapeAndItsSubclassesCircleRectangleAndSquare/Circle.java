@@ -1,4 +1,4 @@
-package oop.exersizes.superclassshapeanditssubclassescirclerectangleandsquare
+package oop.exersizes.superclassshapeanditssubclassescirclerectangleandsquare;
 
 public class Circle extends Shape {
 
@@ -76,7 +76,7 @@ public class Circle extends Shape {
 	*/
 	@Override
 	public String toString() {
-		return "A Circle with radius=" + radius ", which is a subclass of " + super.toString();
+		return "A Circle with radius=" + radius + ", which is a subclass of " + super.toString();
 	}
 	
 }
