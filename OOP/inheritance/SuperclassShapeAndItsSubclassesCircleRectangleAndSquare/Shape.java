@@ -1,4 +1,4 @@
-package oop.exersizes.superclassshapeanditssubclassescirclerectangleandsquare
+package oop.exersizes.superclassshapeanditssubclassescirclerectangleandsquare;
 
 /**
  * Write a superclass called Shape (as shown in the class diagram), which contains:
@@ -111,7 +111,7 @@ public class Shape {
 	 */
 	@Override
 	public String toString() {
-		return "A Shape with color of " + color " and" + (filled ? "" : " not") + " filled.";
+		return "A Shape with color of " + color + " and" + (filled ? "" : " not") + " filled.";
 	}
   
 }
