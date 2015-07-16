@@ -3,7 +3,7 @@ package oop.excercises.thepointandlineclasses;
 public class Line {
 
 	private Point begin;
-	private Point End;
+	private Point end;
   
   	/**
   	 * A constructor that initializes the begin and end points to the given values. 
@@ -102,7 +102,7 @@ public class Line {
 	 * 
 	 * @return length of the line
 	 */
-	public int getLength() {
+	public double getLength() {
 		int xDiff = end.getX() - begin.getX();
 		int yDiff = end.getY() - begin.getY();
 		return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
