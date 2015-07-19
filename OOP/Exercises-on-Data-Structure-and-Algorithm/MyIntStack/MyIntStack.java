@@ -1,3 +1,12 @@
+/*
+ * A stack is a first-in-last-out queue. Write a program calld MyIntStack, 
+ * which uses an array to store the contents, restricted to int.
+ * Write a test program.
+ * Try:
+ * Modify the push() method to throw an IllegalStateException if the stack is full.
+ * Modify the push() to return true if the operation is sucessful, or false otherwise.
+ * Modify the push() to increase the capacity by reallocating another array, if the stack is full.
+*/
 package oop.excercises.MyIntStack;
 
 import java.util.Arrays;
@@ -14,13 +23,12 @@ public class MyIntStack {
 
 	// Modify the push() to increase the capacity by reallocating another array,
 	// if the stack is full.
-	public boolean push(int element) {
+	public void push(int element) {
 		if (this.isFull()) {
 			int[] newContents = Arrays.copyOf(contents, contents.length * 2);
 			contents = newContents;
 		}
 		contents[++tos] = element;
-		return true;
 	}
 
 	public int pop() {
